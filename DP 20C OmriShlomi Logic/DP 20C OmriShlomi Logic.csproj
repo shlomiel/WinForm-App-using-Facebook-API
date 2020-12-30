@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA40F7E6-A9FB-430E-97C0-188CA9BA223D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DP_20C_OmriShlomi_Logic</RootNamespace>
+    <AssemblyName>DP 20C OmriShlomi Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>..\..\..\שנה ב\Guy_Ronens\DP\01_FB01_BasicFacebookFeatures.V6.8.0.18\01_FB01_BasicFacebookFeatures.V6.8.0.18\FBApi\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="FbGraphApiWrapper">
+      <HintPath>..\..\..\שנה ב\Guy_Ronens\DP\01_FB01_BasicFacebookFeatures.V6.8.0.18\01_FB01_BasicFacebookFeatures.V6.8.0.18\FBApi\FbGraphApiWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppLogic.cs" />
+    <Compile Include="BasicFeatures.cs" />
+    <Compile Include="ControlObserver.cs" />
+    <Compile Include="CompositePages.cs" />
+    <Compile Include="FetchCheckInsStrategy.cs" />
+    <Compile Include="FetchEventsStrategy.cs" />
+    <Compile Include="FetchFriendsStrategy.cs" />
+    <Compile Include="FetchPagesStrategy.cs" />
+    <Compile Include="FirstFeature.cs" />
+    <Compile Include="IAgeCalculator.cs" />
+    <Compile Include="IFetchStrategy.cs" />
+    <Compile Include="IObserverControl.cs" />
+    <Compile Include="IPageComponent.cs" />
+    <Compile Include="PageSorterBase.cs" />
+    <Compile Include="PageSorterByCheckins.cs" />
+    <Compile Include="PageSorterByLikes.cs" />
+    <Compile Include="PageSorterByTalkingAbout.cs" />
+    <Compile Include="PageWrapper.cs" />
+    <Compile Include="SecondFeature.cs" />
+    <Compile Include="UserAge.cs" />
+    <Compile Include="UserAgeProxy.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
